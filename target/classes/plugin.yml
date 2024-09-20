@@ -1,0 +1,12 @@
+name: OmniTool
+version: '1.0'
+main: me.sonix.omniTool.OmniTool
+api-version: '1.20'
+authors: [SonixXD]
+description: A custom plugin for ingame.name
+website: ingame.name
+
+commands:
+  giveKit:
+    description: Gives Basic Items To User
+    usage: /<command>
