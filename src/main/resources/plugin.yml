@@ -10,3 +10,6 @@ commands:
   giveKit:
     description: Gives Basic Items To User
     usage: /<command>
+  upgrade:
+    description: Upgrade The tools
+    usage: /<command>
