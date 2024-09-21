@@ -1,5 +1,6 @@
 package me.sonix.omniTool.Commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -23,18 +24,9 @@ public class giveKitsCommand implements CommandExecutor {
             ItemStack pick = new ItemStack(Material.DIAMOND_PICKAXE,1);
             ItemMeta pickMeta = pick.getItemMeta();
             assert pickMeta != null;
-            pickMeta.setDisplayName("Pickaxe");
-            List<String> pickLore = new ArrayList<>();
-            pickLore.add("Tokenator 57/100");
-            pickLore.add("Skibidi 24/100");
-            pickLore.add("MiningSpeed 66/100");
-
-            pickMeta.setLore(pickLore);
-
+            pickMeta.setDisplayName("Skibidi Pickaxe");
+            pickMeta.setLore(List.of(ChatColor.GOLD+"Picks the Axe",ChatColor.DARK_GRAY+"Placeholder Stats","Tokenator 0","Skibidi 0 ","Mining Speed 0",ChatColor.YELLOW+"SHIFT + Right Click To open a Menu",ChatColor.WHITE+"Common"));
             pick.setItemMeta(pickMeta);
-
-
-
 
             p.getInventory().addItem(pick);
 
@@ -44,3 +36,10 @@ public class giveKitsCommand implements CommandExecutor {
         return true;
     }
 }
+
+//Item Lore Template
+//l1->basic info of item
+//l2->stats maybe idk
+//enchant names
+//ln-2 -> "shift right click to open menu"
+//ln-1 -> <rarity>

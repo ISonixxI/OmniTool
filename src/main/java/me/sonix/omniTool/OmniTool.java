@@ -1,6 +1,8 @@
 package me.sonix.omniTool;
 
 import me.sonix.omniTool.Commands.giveKitsCommand;
+import me.sonix.omniTool.Inventory.inventoryListeners;
+import me.sonix.omniTool.Inventory.upgradeInventory;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -18,7 +20,10 @@ public final class OmniTool extends JavaPlugin implements Listener {
         // Plugin startup logic
         System.out.println("[OmniTool v1.0 ] -- Starting");
 
+        getServer().getPluginManager().registerEvents(new inventoryListeners(), this);
+
         getCommand("giveKit").setExecutor(new giveKitsCommand());
+        getCommand("upgrade").setExecutor(new upgradeInventory());
     }
 
 
